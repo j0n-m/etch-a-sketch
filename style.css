@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button,
+.grid-size-btn {
+  align-self: flex-start;
+  height: 30px;
+  padding: 4px;
+}
+
+.container {
+  min-height: 560px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.grid {
+  background-color: rgb(208, 208, 208);
+  flex: 1 1 auto;
+  min-width: calc(560px/16 - 0px);
+  border: 1px solid black;
+}
+
+.grid:hover:not(.draw) {
+  background-color: rgb(158, 158, 158);
+  z-index: 1;
+}
+
+.draw {
+  background-color: black;
+  z-index: 500;
+}
