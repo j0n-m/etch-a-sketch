@@ -1,7 +1,7 @@
 "use strict";
 
 const container = document.querySelector('.container');
-const CONTAINER_MAX_WIDTH = container.style.maxWidth = "500px";
+const CONTAINER_MIN_WIDTH = container.style.minWidth = "500px";
 const CONTAINER_MIN_HEIGHT = container.style.minHeight = "500px";
 const resetBtn = document.querySelector(".grid-reset-btn");
 const gridSizeSlider = document.querySelector('#grid-size-slider');
@@ -43,7 +43,7 @@ function createGrid() {
       let grid = document.createElement('div');
       grid.classList.add('grid');
       grid.style.setProperty('min-height', 'calc(' + CONTAINER_MIN_HEIGHT + '/' + currentGridSize + ')');
-      grid.style.setProperty('max-Width', 'calc(' + CONTAINER_MAX_WIDTH + '/' + currentGridSize + ')');
+      grid.style.setProperty('min-Width', 'calc(' + CONTAINER_MIN_WIDTH + '/' + currentGridSize + ')');
       wrapper.appendChild(grid);
       container.appendChild(wrapper);
     }
