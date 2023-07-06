@@ -8,8 +8,14 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  min-height: 90svh;
+}
+
+h2 {
+  padding: 1rem 0;
 }
 
 button,
@@ -17,25 +23,43 @@ button,
   align-self: flex-start;
   height: 30px;
   padding: 4px;
+  width: 100%;
+}
+
+.page-wrapper {
+  min-width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  border: 1px solid red;
+
+}
+
+.settings {
+  border: 1px solid red;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .container {
-  min-height: 560px;
-  max-width: 560px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .wrapper {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1;
 }
 
 .grid {
   background-color: rgb(208, 208, 208);
-  flex: 1 1 auto;
-  min-width: calc(560px/16 - 0px);
+  flex-grow: 1;
+  flex-shrink: 1;
   border: 1px solid black;
+  user-select: none;
 }
 
 .grid:hover:not(.draw) {
